@@ -1,11 +1,10 @@
 import math
-
 import mujoco
 import numpy as np
 from scipy.spatial.transform import Rotation
 
 # obtained from running `calculate_lqr_gains.py`
-LQR_K = [-2.1402165848237837, -0.03501370844016172, 5.9748026764525894e-18, 2.236067977499789]
+LQR_K = [-331.8033, -67.7041, -3.1623, -28.2676 ]
 WHEEL_RADIUS = 0.034
 MAX_MOTOR_VEL = 500.0 # rad/s
 
@@ -98,8 +97,8 @@ class RobotLqr:
         # face a random direction
         x_rot = (np.random.random() - 0.5) * 2 * math.pi
         # rotate and pitch slightly
-        y_rot = (np.random.random() - 0.5) * 0.4
-        z_rot = (np.random.random() - 0.5) * 0.4
+        y_rot = 0.0
+        z_rot = 0.0
         euler_angles = [x_rot, y_rot, z_rot]
         # Convert to quaternion
         rotation = Rotation.from_euler('xyz', euler_angles)

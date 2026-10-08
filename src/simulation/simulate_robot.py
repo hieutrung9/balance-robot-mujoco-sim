@@ -263,7 +263,7 @@ class Window(QMainWindow):
     def reset_simulation(self):
         self.speed_slider.setValue(0)
         self.yaw_slider.setValue(0)
-        # Reset state and time.
+        # Reset state and time.py
         mujoco.mj_resetData(self.model, self.data)
         mujoco.mj_forward(self.model, self.data)
         self.th.reset()

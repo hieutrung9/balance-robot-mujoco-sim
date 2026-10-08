@@ -24,7 +24,11 @@ It's recommended to use the conda environment file included in this repository; 
 ## Calculating LQR parameters
 
 The LQR parameters are already [included in the source code](./src/simulation/robot_lqr.py). There is no need to re-calculate these parameters unless the physical characteristics of the robot change (as defined in [`robot-02.xml`](./src/simulation/robot-02.xml)).
-
+If you do need to re-calculate these parameters after modifying the robot's design, you can use the included calculation script. Run the following command in your terminal:
+```bash
+cd src/simulation
+python calculate_lqr_gains.py
+ Or
 If you do need to re-calculate these parameters follow the process defined in the [PyBullet simulation repo](https://github.com/lachlanhurst/balance-robot-pybullet-sim).
 
 
