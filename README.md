@@ -5,7 +5,7 @@ Simulation of a two wheeled self balancing robot, this time using [MuJoCo](https
 
 After implementing the same simulation using PyBullet (see [here](https://github.com/lachlanhurst/balance-robot-pybullet-sim)), I found that PyBullet support for [Stable-Baselines3](https://stable-baselines3.readthedocs.io/) / [Gymnasium](https://gymnasium.farama.org/index.html) was a little lacking. It made sense to switch to MuJoCo given how early on this project is.
 
-![Self balancing robot simulation video](./docs/mujoco_sim.gif)
+![Self balancing robot simulation video](./docs/xe3tang.png)
 
 
 ## Setting up the development environment
