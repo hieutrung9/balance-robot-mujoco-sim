@@ -4,7 +4,7 @@ import numpy as np
 from scipy.spatial.transform import Rotation
 
 # obtained from running `calculate_lqr_gains.py`
-LQR_K = [-331.8033, -67.7041, -3.1623, -28.2676 ]
+LQR_K = [-79.1425, -17.3877, -3.1623, -21.5767]
 WHEEL_RADIUS = 0.034
 MAX_MOTOR_VEL = 500.0 # rad/s
 

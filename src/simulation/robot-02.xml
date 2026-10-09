@@ -2,34 +2,33 @@
   <worldbody>
     <body name="robot_body">
         <joint name="robot_body_joint" type="free"/>
-    
-        <geom name="motor_base" type="box" size="0.1 0.08 0.08" pos="0 0 0.05" rgba="0.1 0.1 0.1 1" mass="4.0"/>
+        
+        <geom name="motor_base" type="box" size="0.06 0.05 0.05" pos="0 0 0.04" rgba="0.1 0.1 0.1 1" mass="1.0"/>
 
-        <geom name="tier_1" type="box" size="0.25 0.2 0.02" pos="0 0 0.18" rgba="0.2 0.3 0.5 1" mass="2.0"/>
+        <geom name="tier_1" type="box" size="0.15 0.12 0.01" pos="0 0 0.10" rgba="0.2 0.3 0.5 1" mass="0.5"/>
         
-        <geom name="tier_2" type="box" size="0.25 0.2 0.02" pos="0 0 0.43" rgba="0.2 0.3 0.5 1" mass="2.0"/>
+        <geom name="tier_2" type="box" size="0.15 0.12 0.01" pos="0 0 0.22" rgba="0.2 0.3 0.5 1" mass="0.5"/>
         
-        <geom name="tier_3" type="box" size="0.25 0.2 0.02" pos="0 0 0.68" rgba="0.2 0.3 0.5 1" mass="2.0"/>
+        <geom name="tier_3" type="box" size="0.15 0.12 0.01" pos="0 0 0.34" rgba="0.2 0.3 0.5 1" mass="0.5"/>
         
-        <geom name="col_1" type="cylinder" size="0.015 0.25" pos="0.22 0.17 0.43" rgba="0.7 0.7 0.7 1" mass="0.5"/>
-        <geom name="col_2" type="cylinder" size="0.015 0.25" pos="-0.22 0.17 0.43" rgba="0.7 0.7 0.7 1" mass="0.5"/>
-        <geom name="col_3" type="cylinder" size="0.015 0.25" pos="0.22 -0.17 0.43" rgba="0.7 0.7 0.7 1" mass="0.5"/>
-        <geom name="col_4" type="cylinder" size="0.015 0.25" pos="-0.22 -0.17 0.43" rgba="0.7 0.7 0.7 1" mass="0.5"/>
+        <geom name="col_1" type="cylinder" size="0.008 0.12" pos="0.13 0.10 0.22" rgba="0.7 0.7 0.7 1" mass="0.1"/>
+        <geom name="col_2" type="cylinder" size="0.008 0.12" pos="-0.13 0.10 0.22" rgba="0.7 0.7 0.7 1" mass="0.1"/>
+        <geom name="col_3" type="cylinder" size="0.008 0.12" pos="0.13 -0.10 0.22" rgba="0.7 0.7 0.7 1" mass="0.1"/>
+        <geom name="col_4" type="cylinder" size="0.008 0.12" pos="-0.13 -0.10 0.22" rgba="0.7 0.7 0.7 1" mass="0.1"/>
 
-        <body name="l_wheel" pos="-0.28 0 0.034">
+        <body name="l_wheel" pos="-0.18 0 0.034">
             <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.032" diaginertia="2.3e-05 1.3e-05 1.3e-05"/>
-            <joint name="torso_l_wheel" type="hinge" pos="0 0 0" axis="-1 0 0" actuatorfrcrange="-50 50" damping="0.1"/>
-            <geom name="l_wheel_geom" size="0.12 0.04" quat="0.707107 0 0.707107 0" type="cylinder" material="wheel_material"/>
+            <joint name="torso_l_wheel" type="hinge" pos="0 0 0" axis="-1 0 0" actuatorfrcrange="-20 20" damping="0.1"/>
+            <geom name="l_wheel_geom" size="0.06 0.02" quat="0.707107 0 0.707107 0" type="cylinder" material="wheel_material"/>
         </body>
 
-        <body name="r_wheel" pos="0.28 0 0.034">
+        <body name="r_wheel" pos="0.18 0 0.034">
             <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="0.032" diaginertia="2.3e-05 1.3e-05 1.3e-05"/>
-            <joint name="torso_r_wheel" type="hinge" pos="0 0 0" axis="1 0 0" actuatorfrcrange="-50 50" damping="0.1"/>
-            <geom name="r_wheel_geom" size="0.12 0.04" quat="0.707107 0 0.707107 0" type="cylinder" material="wheel_material"/>
+            <joint name="torso_r_wheel" type="hinge" pos="0 0 0" axis="1 0 0" actuatorfrcrange="-20 20" damping="0.1"/>
+            <geom name="r_wheel_geom" size="0.06 0.02" quat="0.707107 0 0.707107 0" type="cylinder" material="wheel_material"/>
         </body>
     </body>
 </worldbody>
-
 
   <actuator>
     <velocity name="motor_l_wheel" joint="torso_l_wheel" gear="1" kv="0.9"/>
